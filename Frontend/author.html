@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Vue and Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <title>MegaZine</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="nav ">
+            <div class="mainmenu">
+                <ul>
+                    <li><a href="index.html">Domov</a></li>
+                    <li><a href="ostrani.html">O strani</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container author-header">
+        <h1>Avtorji</h1>
+        <p>Dodaj, najdi, posodobi, briši avtorje.</p>
+        <br>
+    </div>
+
+    <!-- Vsi članki -->
+    <div class="container author">
+        <section id="author">
+            <div class="row">
+                <div class="input-group mb-3 col">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">ID</span>
+                    </div>
+                    <input type="number" min="0" class="form-control" aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default" v-model="author.authorId">
+                </div>
+                <div class="input-group mb-3 col">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Ime</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default" v-model="author.firstName">
+                </div>
+                <div class="input-group mb-3 col">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Priimek</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default" v-model="author.lastName">
+                </div>
+            </div>
+
+            <br>
+            <button class="btn btn-primary" v-on:click="findAuthor">Išči po imenu</button>&nbsp
+            <button class="btn btn-primary" v-on:click="addAuthor">Dodaj avtorja</button>&nbsp
+            <button class="btn btn-primary" v-on:click="updateAuthor">Posodobi podatke</button>
+
+            <br><br><br>
+            <table class="table table-hover ">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Ime</th>
+                        <th scope="col">Priimek</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="author in authors">
+                        <th scope="row">{{author.authorId}}</th>
+                        <td>{{author.firstName}}</td>
+                        <td>{{author.lastName}}</td>
+                        <td>
+                            <button type="button" class="btn btn-danger"
+                                v-on:click="deleteVisitor(author.authorId)">Izbriši</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br><br>
+        </section>
+    </div>
+
+    <div class="footer ">
+        <div class="footer-list">
+            <ul>
+                <li><a href="category.html">Kategorije</a></li>
+                <li><a href="author.html">Avtorji</a></li>
+                <li><a href="article.html">Članki</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2022 MegaZine</span>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="JS/author.js"></script>
+</body>
+</html>

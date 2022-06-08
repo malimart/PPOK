@@ -1,0 +1,360 @@
+/****    NAVIGACIJA    ****/
+
+.logo {
+    max-width: 1230px;
+    margin: auto;
+}
+
+.logo img {
+    max-width: 400px;
+    padding: 40px 0;
+}
+
+.nav {
+    background-color: #288ac4;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.homepage a {
+    text-decoration: none;
+    color: #212529;
+}
+
+.homepage a:visited {
+    text-decoration: none;
+    color: #212529;
+}
+
+.nav a:visited  {
+    color: white;
+    text-decoration: none;
+}
+
+.mainmenu {
+    max-width: 1230px;
+    width: 100%;
+    margin: auto;
+}
+
+.mainmenu ul li{
+    display: inline;
+    list-style: none;
+    margin: auto;
+    padding-right: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.mainmenu ul {
+    margin: auto;
+    padding: 0;
+}
+
+
+/****    CONTAINER    ****/
+
+.container {
+    max-width: 1230px;
+    padding: 0;
+    
+}
+
+.featured {
+    padding: 0 2px;
+}
+
+.featured img {
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: 1.0s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.featured img:hover {
+    -webkit-transform: scale(1.01);
+	transform: scale(1.01);
+}
+
+span {
+    padding-top: 20px;
+    color: #288ac4;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 40px;
+    padding: 10px 0;
+    font-weight: 500;
+}
+
+h2 {
+    padding: 5px 0 5px 0;
+}
+
+.homepage h2 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.homepage p {
+    padding-bottom: 40px;
+    text-align: left;
+}
+
+.regular h2 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.regular img {
+    height: 400px;
+}
+
+.homepage .row {
+    padding: 10px;
+    margin: 10px;
+}
+
+
+/****    FOOTER    ****/
+
+.footer {
+    background-color: #e2e2e2;
+    min-height: 200px;
+    position: relative;
+    
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+    margin-top: 30px;
+    position: absolute;
+}
+
+.footer ul li {
+    list-style: none;
+    padding-top: 10px;
+}
+
+.footer-list {
+    max-width: 1230px;
+    margin: auto;
+    padding: 0;
+    position: relative;
+}
+
+.footer-bottom {
+    text-align: center;
+    max-height: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+.footer-bottom span {
+    color: #767c88;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.footer a {
+    color: #767c88;
+    text-decoration: underline;
+}
+
+.footer a:visited  {
+    color: #767c88;
+    text-decoration: underline;
+}
+
+
+/****    SIDEBAR    ****/
+aside {
+    padding-left: 80px !important;
+}
+
+aside > h5 {
+    margin-top: 25px;
+    color: #212529;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+section > h5 {
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+/****    O STRANI    ****/
+
+.ostrani img {
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.ostrani h6 {
+    color: #888f9e;
+    font-style: italic;
+}
+
+.ostrani h6 {
+    text-align: center;
+    padding: 5px 0 15px 0;
+}
+
+
+/****    KONTAKTNI OBRAZEC    ****/
+
+form .row {
+    padding: 10px 0;
+}
+
+label {
+    font-size: 18px;
+}
+
+#sporocilo {
+    width: 400px;
+    height: 200px;
+}
+
+input {
+    min-width: 280px;
+    width: 40%;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+}
+
+textarea {
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    width: 100% !important;
+    height: 150px !important;
+}
+
+form span {
+    color: red;
+    font-size: 16px;
+}
+
+#submit {
+    min-width: 100px;
+    width: 100px;
+    padding: 10px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: solid;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+#submit:hover {
+    box-shadow: #888f9e;
+    background-color: #288ac4;
+    color: #f6f7f8;
+}
+
+@media screen and (max-width: 1500px) {
+    .container, .logo, .nav ul {
+        padding: 5px 20px;
+        
+    }
+    .footer {
+        position: relative;
+    }
+    .footer ul {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .ostrani img {
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/****       CARDS      ****/
+
+.card {
+    margin-bottom: 20px;
+    min-height: 400px;
+
+}
+
+.card-subtitle {
+    margin-top: 15px;
+    margin-bottom: 15px !important;
+    color: #288ac4 !important;
+}
+
+.card:hover{
+    box-shadow: 2px 2px 8px #484d52 !important;
+    -webkit-transform: scale(1.01);
+	transform: scale(1.01);
+    transition: transform 0.2s;
+}
+
+.card-title {
+    font-size: 1.7rem;
+    line-height: 1.4;
+}
+
+
+/****       FORMS      ****/
+
+.id-field {
+    max-width: 125px;
+}
+
+.id-category {
+    max-width: 200px;
+}
+
+#excerpt-form {
+    height: 80px !important;
+}
+
+#content-form {
+    height: 400px !important;
+}
+
+.btn-primary {
+    background-color:#288ac4;
+    border-color: #288ac4;
+}
+
+.btn-primary:hover {
+    background-color:#1d6e9c;
+    border-color: #1d6e9c;
+}

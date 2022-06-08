@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Vue and Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>MegaZine</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="nav ">
+            <div class="mainmenu">
+                <ul>
+                    <li><a href="index.html">Domov</a></li>
+                    <li><a href="ostrani.html">O strani</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container ostrani" id="ostrani">
+        <div class="row">
+            <article class="col-sm-8">
+                <header>
+                    <h1>O strani</h1>
+                </header>
+                <div>
+                    <h2>Kaj je zine?</h2>
+                    <p><a href="https://thecreativeindependent.com/guides/how-to-make-a-zine/" target="_blank"
+                            rel="noreferrer noopener">Zine</a> je ročno izdelan časopis, ki izhaja v nekaj deset ali sto
+                        primerkih, izdelan v namizni založbi s skromnimi sredstvi. V ozadju zina je običajno posameznik
+                        ali
+                        majhna skupina, ki želi opozoriti javnost na neko družbeno temo. Ker so zini popolnoma neodvisni
+                        medij, se ob njih zbirajo najrazličnejše skupine in posamezniki iz celotne družbe. Taka je tudi
+                        raznolikost tem, pogledov in interesov. V digitalni dobi se je dejavnost zinov preselila na
+                        medmrežje, kjer je še lažje objavljati in zine je dobil svojo digitalno obliko.</p>
+                    <div>
+                        <div>
+                            <img src="images/zini.jpg" alt="zini">
+                            <h6>Zbirka zinov.</h6>
+                        </div>
+                    </div>
+                    <p>Zine bi lahko označili tudi za pamflete, biltene, brošure, ki jih zini na nek način združujejo,
+                        saj
+                        so zini vse to s svojo lastno značilnostjo povrhu. Ta značilnost je raznolikost tem in njihova
+                        široka družbena angažiranost, saj nastajajo znotraj širokega družbenega foruma z močno osebno
+                        noto.
+                        S tem omogočajo prisotnost tistim temam, ki so drugače potisnjene na obrobje medijske pozornosti
+                        kljub njihovi pomembnosti.</p>
+                    <p><a href="https://mentalfloss.com/article/88911/brief-history-zines" target="_blank"
+                            rel="noreferrer noopener">Zgodovina</a> zinov je različno tolmačena, kar je pričakovano
+                        zaradi
+                        njihove posebnosti. Po nekaterih mnenjih je bil prvi zine pamflet <a
+                            href="https://en.wikipedia.org/wiki/Common_Sense_(pamphlet)"></a><em><a
+                                href="https://en.wikipedia.org/wiki/Common_Sense_(pamphlet)" target="_blank"
+                                rel="noreferrer noopener">Common sense</a> (Zdrava pamet)</em>, ki ga je izdal
+                        <em>Thomas
+                            Paine</em> med letoma 1775–76, ki je na veliko vplival na mnenje javnosti glede
+                        osamosvojitve
+                        ameriških trinajstih kolonij izpod britanske krone. Nekateri imajo za prvi pravi zine časopis
+                        <em>Commet</em>, ki ga je 1930 leta izdal čikaški <em>Science Correspondence Club</em> in je
+                        utemeljil trend znanstvene fantastike v zinih. Kasneje, okoli 1970, je bila glavna tema zinov
+                        Punk
+                        kultura, okoli 1990 kultura okoli <em>Riot grrrl </em>in gibanja za enakopravnost spolov. Danes
+                        so
+                        zini razprostranjeni v sled nizke cene produkcije in enostavnega objavljanja zaradi interneta.
+                    </p>
+                    <h2>Kaj je MegaZine?</h2>
+                    <p><strong>Novinarstvo je združevanje znanosti in oglaševanja, torej metodičnega iskanja resnice in
+                            pritegovanja pozornosti.</strong> MegaZine je “<em>mega</em>“, kar pomeni da gre za tematsko
+                        izjemno raznolik “<em>zine</em>” v digitalni obliki z enostavnim etosom – naredi sam.</p>
+                    <p>MegaZine vsebina je sestavljena iz različnih tem, ki se jim odteguje pozornost, so nepravično
+                        odrinjene na obrobje, predstavljajo veliko moralno dilemo oziroma tabu v družbi ali jih
+                        oblikujejo
+                        večinska mnenja. MegaZine vedno nekoliko drugače vidi tudi teme, ki zavzemajo osrednji prostor
+                        medijev. Stališče MegaZine najraje zavzema opozicijsko družbeno držo, antitezo občemu mnenju in
+                        vzpodbuja esejistično raziskovanje.</p><br><br>
+                </div>
+            </article>
+            <aside class="col-sm-4">
+                <h5>KATEGORIJE:</h5>
+                <hr>
+                <section class="sidebar" v-for="category in categories">
+                    <h5>{{category.name}}</h5>
+                    <hr>
+                </section>
+            </aside>
+        </div>
+    </div>
+
+    <div class="footer ">
+        <div class="footer-list">
+            <ul>
+                <li><a href="category.html">Kategorije</a></li>
+                <li><a href="author.html">Avtorji</a></li>
+                <li><a href="article.html">Članki</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2022 MegaZine</span>
+        </div>
+    </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <script src="JS/ostrani.js"></script>
+</body>
+
+</html>
